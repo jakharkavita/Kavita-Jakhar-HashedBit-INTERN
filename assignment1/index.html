@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hashebit Company Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    header .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    
+   .social img{
+      margin-right: 20px;
+    }
+
+    nav {
+      background-color: #34495e;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 30px;
+    }
+
+    .container {
+      display: flex;
+      flex: 1;
+      font-size: 25px;
+    }
+    .container label{
+      font-size: 20px;
+    }
+    aside {
+      width: 250px;
+      background-color: #ecf0f1;
+      padding: 20px;
+      border-right: 1px solid #bdc3c7;
+
+    }
+
+    aside h3 {
+      margin-bottom: 15px;
+    }
+
+    aside label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      margin: 20px;
+    }
+
+    aside input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    main {
+      flex: 1;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    main p{
+        font-size: 20px;
+    }
+    .box {
+      background-color: white;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    .box img {
+      width: 300px;
+      height: 200px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+        <img src="logo.jpg" alt="Hashebit Logo" height="60">
+      </div>      
+    <div class="social">
+      <img src="fasebook.jpg" alt="facebook" height="40">
+      <img src="twitter.jpg" alt="facebook" height="40">
+      <img src="linkedin.jpg" alt="facebook" height="40">
+    </div>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="container">
+    <aside>
+      <h3>Sidebar Form</h3>
+      <label for="name">Portfolio</label>
+
+      <label for="class">More Info</label>
+
+      <label for="class">Related Content</label>
+
+      <label for="class">Questions</label>
+    
+    </aside>
+
+    <main>
+      <div class="box">
+        <h2>A Busy Tech Team at Work</h2>
+        <img src="image 1.jpg" alt="Image 1">
+        <p>This photo shows a top view of a working table where people are busy using laptops and phones.
+             There are notebooks, bottles, snacks, headphones, and other items on the table — 
+             it looks like a real team meeting or a tech work session. Everyone seems focused on their
+              tasks, maybe working together on an important project.</p>
+      </div>
+
+      <div class="box">
+        <h2>A Cute Little Kitten</h2>
+        <img src="image 4.jpg" alt="Image 2">
+        <p>This picture shows a small, cute kitten looking up sweetly at something.
+             Its blue eyes and soft fur make it look even more adorable. It seems like the kitten is 
+             waiting for someone or watching something with full attention. The overall moment captured
+              is very innocent and heart-touching.</p>
+      </div>
+
+      <div class="box">
+        <h2>A Drone Flying in the Sky</h2>
+        <img src="image 3.png" alt="Image 3">
+        <p>In this image, a white drone is flying in the clear blue sky. Its propellers are spinning
+             fast, which shows that it’s in motion. Some green trees are seen below, and the whole 
+             background is bright and clear. This picture is a great example of modern technology, 
+             like how drones are used for photography or surveys.
+
+        </p>
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    &copy; 2025 Hashebit Company. All rights reserved. Sample Footer Text.
+  </footer>
+
+</body>
+</html>
