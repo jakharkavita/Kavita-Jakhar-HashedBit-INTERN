@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AlphaBeta Assignment - Div Creation</title>
+  <style>
+    #container {
+      padding: 20px;
+      border: 2px dashed gray;
+    }
+    .custom-div {
+      width: 100px;
+      height: 50px;
+      border: 5px solid rgb(3, 3, 3);
+      margin: 5px;
+      padding: 5px;
+      background: rgb(242, 26, 26);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="container"></div>
+
+  <script>
+    function createDiv(width, height, text) {
+      const newDiv = document.createElement("div");
+      newDiv.className = "custom-div";
+      newDiv.style.width = width + "px";
+      newDiv.style.height = height + "px";
+      newDiv.textContent = text;
+
+      const container = document.getElementById("container");
+      container.appendChild(newDiv);
+    }
+
+    createDiv(100, 50, "Hello Ma'am");
+
+    // Do not change this code
+    window.createDiv = createDiv;
+  </script>
+
+</body>
+</html>

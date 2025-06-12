@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tax Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef2f3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 350px;
+    }
+
+    input {
+      padding: 12px;
+      width: 100%;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 12px;
+      width: 100%;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Tax Calculator</h2>
+    <input type="number" id="salary" placeholder="Enter your salary" />
+    <button onclick="showTax()">Calculate Tax</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function findTax(salary) {
+      let taxRate;
+      
+      switch (true) {
+        case (salary > 0 && salary <= 500000):
+          taxRate = 0;
+          break;
+        case (salary > 500000 && salary <= 1000000):
+          taxRate = 0.10;
+          break;
+        case (salary > 1000000 && salary <= 1500000):
+          taxRate = 0.20;
+          break;
+        case (salary > 1500000):
+          taxRate = 0.30;
+          break;
+        default:
+          return "Invalid salary input.";
+      }
+
+      const taxAmount = salary * taxRate;
+      return `Your tax is ₹${taxAmount.toFixed(2)} (${taxRate * 100}% rate)`;
+    }
+
+    function showTax() {
+      const salary = parseFloat(document.getElementById("salary").value);
+      const result = findTax(salary);
+      document.getElementById("result").textContent = result;
+    }
+  </script>
+
+</body>
+</html>
